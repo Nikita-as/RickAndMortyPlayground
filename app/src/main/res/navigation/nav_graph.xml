@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/charactersFragment">
+
+    <fragment
+        android:id="@+id/charactersFragment"
+        android:name="com.example.rickandmortyplayground.presentation.fragments.CharactersFragment"
+        android:label="Characters"
+        tools:layout="@layout/characters_fragment">
+        <action
+            android:id="@+id/action_charactersFragment_to_characterDetailFragment"
+            app:destination="@id/characterDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/characterDetailFragment"
+        android:name="com.example.rickandmortyplayground.presentation.fragments.CharacterDetailFragment"
+        android:label="Character Detail"
+        tools:layout="@layout/character_detail_fragment">
+        <argument
+            android:name="character"
+            app:argType="com.example.rickandmortyplayground.domain.models.Result"
+            app:nullable="true" />
+    </fragment>
+</navigation>
