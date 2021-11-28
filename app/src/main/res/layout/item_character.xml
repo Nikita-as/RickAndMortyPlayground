@@ -37,27 +37,12 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@id/character_id"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintStart_toEndOf="@+id/character_image"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Antenna Mortyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy" />
 
-            <TextView
-                android:id="@+id/character_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:padding="6dp"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1"
-                app:layout_constraintStart_toEndOf="@+id/character_name"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="1" />
 
             <TextView
                 android:id="@+id/character_species_and_status"
