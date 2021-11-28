@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/andro/AndroidStudioProjects/RickAndMortyPlayground/app/src/main/res/drawable/ic_circle_empty.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/andro/AndroidStudioProjects/RickAndMortyPlayground/app/src/main/res/drawable/ic_circle_green.xml" value="0.14629629629629629" />
+        <entry key="..\:/Users/andro/AndroidStudioProjects/RickAndMortyPlayground/app/src/main/res/drawable/ic_circle_red.xml" value="0.14629629629629629" />
         <entry key="..\:/Users/andro/AndroidStudioProjects/RickAndMortyPlayground/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
         <entry key="..\:/Users/andro/AndroidStudioProjects/RickAndMortyPlayground/app/src/main/res/layout/character_detail_fragment.xml" value="0.1796875" />
-        <entry key="..\:/Users/andro/AndroidStudioProjects/RickAndMortyPlayground/app/src/main/res/layout/item_character.xml" value="0.22" />
+        <entry key="..\:/Users/andro/AndroidStudioProjects/RickAndMortyPlayground/app/src/main/res/layout/item_character.xml" value="0.24347826086956523" />
       </map>
     </option>
   </component>

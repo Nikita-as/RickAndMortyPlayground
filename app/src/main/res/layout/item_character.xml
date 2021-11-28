@@ -43,14 +43,24 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Antenna Mortyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy" />
 
+            <ImageView
+                android:id="@+id/color_indicator"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/ic_circle_red"
+                app:layout_constraintBottom_toTopOf="@id/last_known_location_text"
+                app:layout_constraintStart_toEndOf="@id/character_image"
+                app:layout_constraintTop_toBottomOf="@id/character_name" />
+
 
             <TextView
                 android:id="@+id/character_species_and_status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
                 android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@+id/character_image"
+                app:layout_constraintStart_toEndOf="@+id/color_indicator"
                 app:layout_constraintTop_toBottomOf="@+id/character_name"
                 tools:text="Alive-Human" />
 
@@ -59,7 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="5dp"
                 android:text="Last known location:"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
                 android:textSize="14sp"
@@ -84,7 +94,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="5dp"
                 android:text="First seen in:"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
                 android:textSize="14sp"
