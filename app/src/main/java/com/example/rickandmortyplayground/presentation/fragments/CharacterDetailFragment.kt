@@ -49,22 +49,20 @@ class CharacterDetailFragment : Fragment(R.layout.character_detail_fragment) {
         activity?.let {
             characterDetailViewModel.newCharacterDetail
                 .observe(viewLifecycleOwner, { character ->
-                    with(binding) {
-                        nameDetail.text = character.name
-                        genderDetail.text = character.gender.toString()
-                        dimensionDetail.text = binding.dimensionDetail.text
-                        originDetail.text = character.origin?.name
-                        locationDetail.text = character.location?.name
-                        typeDetail.text = character.type
-                        episodesDetail.text = character.episode?.size.toString()
-                        let {
-                            Glide.with(it.root)
-                                .load(character.image)
-                                .into(binding.characterImageDetail)
-                        }
-                        characterSpeciesAndStatusDetail.text =
-                            "${character.species} - ${character.status}"
+                    binding.nameDetail.text = character.name
+                    binding.genderDetail.text = character.gender.toString()
+                    binding.dimensionDetail.text = binding.dimensionDetail.text
+                    binding.originDetail.text = character.origin?.name
+                    binding.locationDetail.text = character.location?.name
+                    binding.typeDetail.text = character.type
+                    binding.episodesDetail.text = character.episode?.size.toString()
+                    binding.let {
+                        Glide.with(it.root)
+                            .load(character.image)
+                            .into(binding.characterImageDetail)
                     }
+                    binding.characterSpeciesAndStatusDetail.text =
+                        "${character.status} - ${character.species}"
                 })
         }
     }

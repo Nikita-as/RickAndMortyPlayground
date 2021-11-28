@@ -38,6 +38,18 @@
                 app:layout_constraintStart_toEndOf="@+id/character_image"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Antenna Morty" />
+            <TextView
+                android:id="@+id/character_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/character_name"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="1" />
 
             <TextView
                 android:id="@+id/character_species_and_status"

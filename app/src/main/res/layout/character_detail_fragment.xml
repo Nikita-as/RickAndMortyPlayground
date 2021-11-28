@@ -161,7 +161,7 @@
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/location_detail"
-            tools:text="Dimension" />
+            tools:text="Planet" />
 
         <TextView
             android:id="@+id/dimension_text_detail"

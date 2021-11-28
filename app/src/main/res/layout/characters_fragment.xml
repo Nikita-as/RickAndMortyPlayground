@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/grey"
+    android:background="@color/grey_light"
     tools:context=".presentation.fragments.CharactersFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout

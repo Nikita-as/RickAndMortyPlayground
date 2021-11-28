@@ -46,6 +46,7 @@ class CharacterAdapter : RecyclerView.Adapter<CharacterAdapter.CharacterViewHold
         val character = differ.currentList[position]
         holder.itemView.apply {
             binding?.characterName?.text = character.name
+
             binding?.lastKnownLocation?.text = character.location?.name
             binding?.firstSeenIn?.text = character.origin?.name
             binding?.let {
@@ -55,7 +56,8 @@ class CharacterAdapter : RecyclerView.Adapter<CharacterAdapter.CharacterViewHold
                     .into(binding!!.characterImage)
             }
             binding?.characterSpeciesAndStatus?.text =
-                "${character.species} - ${character.status}"
+                "${character.status} - ${character.species}"
+            binding?.characterId?.text = "(id:${character.id.toString()})"
             setOnClickListener {
                 onItemClickListener?.let { it(character) }
                 Log.d("TAG", "${character.id}")
