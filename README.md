@@ -1,11 +1,11 @@
 # RickAndMortyPlayground
 Dagger-Hilt, MVVM, Retrofit, RxJava2, Glide, Navagation
 
-All characters fragment(20 characters)
+Page 1 all characters fragment(20 characters)
 
 ![2021-11-28_19-28-59](https://user-images.githubusercontent.com/80970900/143777034-5a4d859c-3515-4095-8409-9c7e269d7739.png)
 
-next 20 characters
+Page 3 next 20 characters
 
 ![2021-11-28_19-29-24](https://user-images.githubusercontent.com/80970900/143777037-ca2c7bd4-2272-451b-aa8a-90b039f9e462.png)
 
