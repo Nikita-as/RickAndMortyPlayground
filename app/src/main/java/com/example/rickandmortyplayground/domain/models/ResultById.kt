@@ -1,6 +1,5 @@
 package com.example.rickandmortyplayground.domain.models
 
-
 data class ResultById(
     val id: Int?,
     val image: String?,

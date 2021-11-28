@@ -3,7 +3,6 @@ package com.example.rickandmortyplayground.data.remote.dto
 import com.example.rickandmortyplayground.domain.models.Result
 import com.example.rickandmortyplayground.domain.models.ResultById
 
-
 data class ResultDto(
     val created: String?,
     val episode: List<String>?,

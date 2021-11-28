@@ -115,5 +115,4 @@ class CharactersFragment : Fragment(R.layout.characters_fragment) {
         _binding = null
     }
 
-
 }

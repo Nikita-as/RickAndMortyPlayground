@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.example.rickandmortyplayground.databinding.ItemCharacterBinding
 import com.example.rickandmortyplayground.domain.models.Result
 
@@ -27,7 +28,6 @@ class CharacterAdapter : RecyclerView.Adapter<CharacterAdapter.CharacterViewHold
         override fun areContentsTheSame(oldItem: Result, newItem: Result): Boolean {
             return oldItem == newItem
         }
-
     }
 
     val differ = AsyncListDiffer(this, differCallback)
@@ -41,7 +41,6 @@ class CharacterAdapter : RecyclerView.Adapter<CharacterAdapter.CharacterViewHold
         return CharacterViewHolder(binding!!)
     }
 
-
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: CharacterViewHolder, position: Int) {
         val character = differ.currentList[position]
@@ -52,6 +51,7 @@ class CharacterAdapter : RecyclerView.Adapter<CharacterAdapter.CharacterViewHold
             binding?.let {
                 Glide.with(it.root)
                     .load(character.image)
+                    .apply(RequestOptions.centerCropTransform())
                     .into(binding!!.characterImage)
             }
             binding?.characterSpeciesAndStatus?.text =

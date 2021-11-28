@@ -1,5 +1,6 @@
 package com.example.rickandmortyplayground.presentation.viewmodels
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -33,6 +34,7 @@ class CharactersViewModel @Inject constructor(
                 val new = old?.results.orEmpty() + characters?.results.orEmpty()
                 _newCharacters.value = Characters(null, new)
             }, {
+                Log.e("TAG","не удалось получить всех персонажей")
             })
 
         compositeDisposable.add(disposable)
