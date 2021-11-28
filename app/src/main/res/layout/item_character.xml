@@ -24,7 +24,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:srcCompat="@tools:sample/avatars"
+                android:contentDescription="@string/characters_image" />
 
             <TextView
                 android:id="@+id/character_name"
@@ -51,7 +52,8 @@
                 android:src="@drawable/ic_circle_red"
                 app:layout_constraintBottom_toTopOf="@id/last_known_location_text"
                 app:layout_constraintStart_toEndOf="@id/character_image"
-                app:layout_constraintTop_toBottomOf="@id/character_name" />
+                app:layout_constraintTop_toBottomOf="@id/character_name"
+                android:contentDescription="@string/color_indicator_all" />
 
 
             <TextView
@@ -71,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="5dp"
-                android:text="Last known location:"
+                android:text="@string/last_known_location"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/character_image"
@@ -96,7 +98,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="5dp"
-                android:text="First seen in:"
+                android:text="@string/first_seen_in"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/character_image"
@@ -113,7 +115,6 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/character_image"
                 app:layout_constraintTop_toBottomOf="@id/first_seen_in_text"
-
                 tools:text="Tolal Rickall" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
