@@ -63,6 +63,11 @@ class CharacterDetailFragment : Fragment(R.layout.character_detail_fragment) {
                     }
                     binding.characterSpeciesAndStatusDetail.text =
                         "${character.status} - ${character.species}"
+                    if (character.status?.contains("Dead") == true) {
+                        binding.colorIndicatorDetail.setImageResource(R.drawable.ic_circle_red)
+                    } else if (character.status?.contains("Alive") == true) {
+                        binding.colorIndicatorDetail.setImageResource(R.drawable.ic_circle_green)
+                    } else binding.colorIndicatorDetail.setImageResource(R.drawable.ic_circle_grey)
                 })
         }
     }

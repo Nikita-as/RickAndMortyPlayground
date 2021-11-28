@@ -44,18 +44,29 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:text="Name name" />
 
+        <ImageView
+            android:id="@+id/color_indicator_detail"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_circle_red"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_detail" />
+
         <TextView
             android:id="@+id/character_species_and_status_detail"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="22dp"
+            android:layout_marginStart="5dp"
             android:gravity="start"
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="@id/character_image_detail"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/name_detail"
+            app:layout_constraintStart_toEndOf="@id/color_indicator_detail"
             tools:text="Status - species" />
 
         <TextView
@@ -182,12 +193,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="30dp"
+            android:text="Dimension C-137"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/type_detail"
-            android:text="Dimension C-137" />
+            app:layout_constraintTop_toBottomOf="@+id/type_detail" />
+
         <TextView
             android:id="@+id/episodes_text_detail"
             android:layout_width="wrap_content"
