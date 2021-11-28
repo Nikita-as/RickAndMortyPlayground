@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="200dp"
-    android:padding="8dp"
-    android:background="@color/grey">
+    android:padding="8dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_character_image"
