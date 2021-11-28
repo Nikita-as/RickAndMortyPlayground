@@ -59,6 +59,7 @@ class CharactersFragment : Fragment(R.layout.characters_fragment) {
     private fun setUpRecyclerView() {
         charactersAdapter = CharacterAdapter()
         binding.charactersRv.apply {
+            setHasFixedSize(true)
             adapter = charactersAdapter
             layoutManager = LinearLayoutManager(requireContext())
             addOnScrollListener(this@CharactersFragment.scrollListener)

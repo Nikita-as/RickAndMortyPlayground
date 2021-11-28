@@ -68,10 +68,6 @@ class CharacterAdapter : RecyclerView.Adapter<CharacterAdapter.CharacterViewHold
         return differ.currentList.size
     }
 
-    override fun getItemId(position: Int): Long {
-        return position.toLong()
-    }
-
     override fun getItemViewType(position: Int): Int {
         return position
     }
