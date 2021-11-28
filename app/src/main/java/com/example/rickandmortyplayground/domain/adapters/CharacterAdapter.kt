@@ -57,7 +57,6 @@ class CharacterAdapter : RecyclerView.Adapter<CharacterAdapter.CharacterViewHold
             }
             binding?.characterSpeciesAndStatus?.text =
                 "${character.status} - ${character.species}"
-            binding?.characterId?.text = "(id:${character.id.toString()})"
             setOnClickListener {
                 onItemClickListener?.let { it(character) }
                 Log.d("TAG", "${character.id}")
@@ -69,12 +68,6 @@ class CharacterAdapter : RecyclerView.Adapter<CharacterAdapter.CharacterViewHold
         return differ.currentList.size
     }
 
-    private var onItemClickListener: ((Result) -> Unit)? = null
-
-    fun setOnItemClickListener(listener: (Result) -> Unit) {
-        onItemClickListener = listener
-
-    }
     override fun getItemId(position: Int): Long {
         return position.toLong()
     }
@@ -82,5 +75,13 @@ class CharacterAdapter : RecyclerView.Adapter<CharacterAdapter.CharacterViewHold
     override fun getItemViewType(position: Int): Int {
         return position
     }
+
+    private var onItemClickListener: ((Result) -> Unit)? = null
+
+    fun setOnItemClickListener(listener: (Result) -> Unit) {
+        onItemClickListener = listener
+
+    }
+
 
 }
