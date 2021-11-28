@@ -15,15 +15,10 @@ import javax.inject.Inject
 class CharacterDetailViewModel @Inject constructor(
     private val getCharacterByIdUseCase: GetCharacterByIdUseCase
 ) : ViewModel() {
+
     private var compositeDisposable = CompositeDisposable()
-
-    private val _characterId = MutableLiveData<Int>()
-    val characterId : LiveData<Int> = _characterId
-
-    private val TAG = "CharacterViewModel"
     private val _newCharacterDetail = MutableLiveData<ResultById>()
     val newCharacterDetail: LiveData<ResultById> = _newCharacterDetail
-
 
     fun getCharacterById(id: Int?) {
         val disposable = id?.let { characterId ->
@@ -32,7 +27,7 @@ class CharacterDetailViewModel @Inject constructor(
                 .subscribe({ character ->
                     _newCharacterDetail.value = character
                 }, {
-                    Log.e(TAG, "Не удалось получить персонажа")
+                    Log.e("TAG", "Не удалось получить персонажа")
                 })
         }
         disposable.let {
@@ -42,27 +37,8 @@ class CharacterDetailViewModel @Inject constructor(
         }
     }
 
-
-
-
-    //
-//        private fun getCharacterById() {
-//            val disposable = _characterId.let {
-//                getCharacterByIdUseCase(it.value!!)
-//                    .observeOn(AndroidSchedulers.mainThread())
-//                    .subscribe({ character ->
-//                        _newCharacterDetail.value = character
-//                        Log.d(TAG, "${character.id}")
-//                    }, {
-//                        Log.e(TAG, "Не удалось получить персонажа")
-//                    })
-//            }
-//            disposable.let { compositeDisposable.add(it) }
-//        }
-//
     override fun onCleared() {
         super.onCleared()
         compositeDisposable.clear()
     }
-
 }

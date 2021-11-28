@@ -23,12 +23,10 @@ class CharacterDetailFragment : Fragment(R.layout.character_detail_fragment) {
     private val args: CharacterDetailFragmentArgs by navArgs()
     private val characterDetailViewModel: CharacterDetailViewModel by viewModels()
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         _binding = CharacterDetailFragmentBinding.inflate(
             inflater,
             container,
@@ -44,7 +42,6 @@ class CharacterDetailFragment : Fragment(R.layout.character_detail_fragment) {
         showProgressBar()
         fetchingData()
         hideProgressBar()
-
     }
 
     @SuppressLint("SetTextI18n")
@@ -66,8 +63,6 @@ class CharacterDetailFragment : Fragment(R.layout.character_detail_fragment) {
                     }
                     binding.characterSpeciesAndStatusDetail.text =
                         "${character.species} - ${character.status}"
-
-
                 })
 
         }

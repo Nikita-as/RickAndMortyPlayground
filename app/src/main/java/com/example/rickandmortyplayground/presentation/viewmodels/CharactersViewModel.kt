@@ -22,7 +22,7 @@ class CharactersViewModel @Inject constructor(
     val newCharacters: LiveData<Characters> = _newCharacters
 
     init {
-        getAllCharacters(1)
+        getAllCharacters(charactersPage)
     }
 
     private fun getAllCharacters(page: Int) {
@@ -42,7 +42,6 @@ class CharactersViewModel @Inject constructor(
         charactersPage += 1
         getAllCharacters(charactersPage)
     }
-
 
     override fun onCleared() {
         super.onCleared()

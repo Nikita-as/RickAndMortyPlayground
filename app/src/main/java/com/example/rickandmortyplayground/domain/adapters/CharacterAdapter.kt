@@ -46,7 +46,7 @@ class CharacterAdapter : RecyclerView.Adapter<CharacterAdapter.CharacterViewHold
     override fun onBindViewHolder(holder: CharacterViewHolder, position: Int) {
         val character = differ.currentList[position]
         holder.itemView.apply {
-            binding?.characterName?.text = character.id.toString()
+            binding?.characterName?.text = character.name
             binding?.lastKnownLocation?.text = character.location?.name
             binding?.firstSeenIn?.text = character.origin?.name
             binding?.let {
@@ -61,12 +61,10 @@ class CharacterAdapter : RecyclerView.Adapter<CharacterAdapter.CharacterViewHold
                 Log.d("TAG", "${character.id}")
             }
         }
-
     }
 
     override fun getItemCount(): Int {
         return differ.currentList.size
-
     }
 
     private var onItemClickListener: ((Result) -> Unit)? = null

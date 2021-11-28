@@ -1,8 +1,5 @@
 package com.example.rickandmortyplayground.domain.models
 
-import com.example.rickandmortyplayground.domain.models.Location
-import com.example.rickandmortyplayground.domain.models.Origin
-
 
 data class ResultById(
     val id: Int?,

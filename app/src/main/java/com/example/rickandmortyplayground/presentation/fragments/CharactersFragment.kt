@@ -13,8 +13,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.rickandmortyplayground.R
 import com.example.rickandmortyplayground.databinding.CharactersFragmentBinding
 import com.example.rickandmortyplayground.domain.adapters.CharacterAdapter
-import com.example.rickandmortyplayground.util.Constants.Companion.QUERY_PAGE_SIZE
 import com.example.rickandmortyplayground.presentation.viewmodels.CharactersViewModel
+import com.example.rickandmortyplayground.util.Constants.Companion.QUERY_PAGE_SIZE
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -38,8 +38,6 @@ class CharactersFragment : Fragment(R.layout.characters_fragment) {
             false
         )
         return binding.root
-
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -65,7 +63,6 @@ class CharactersFragment : Fragment(R.layout.characters_fragment) {
             layoutManager = LinearLayoutManager(requireContext())
             addOnScrollListener(this@CharactersFragment.scrollListener)
         }
-
     }
 
     private fun fetchingData() {
@@ -75,7 +72,6 @@ class CharactersFragment : Fragment(R.layout.characters_fragment) {
                     charactersAdapter?.differ?.submitList(characters.results)
                     hideProgressBar()
                 })
-
         }
     }
 
@@ -93,7 +89,6 @@ class CharactersFragment : Fragment(R.layout.characters_fragment) {
             val firstVisibleItemPosition = layoutManager.findFirstVisibleItemPosition()
             val visibleItemCount = layoutManager.childCount
             val totalItemCount = layoutManager.itemCount
-
             val isNotLoadingAndNotLastPage = !isLoading && !isLastPage
             val isAtLastItem = firstVisibleItemPosition + visibleItemCount >= totalItemCount
             val isNotAtBeginning = firstVisibleItemPosition >= 0
