@@ -39,7 +39,7 @@ class CharacterAdapter : RecyclerView.Adapter<CharacterAdapter.CharacterViewHold
             parent,
             false
         )
-        return CharacterViewHolder(binding!!)
+        return CharacterViewHolder(requireNotNull(binding))
     }
 
     @SuppressLint("SetTextI18n")
@@ -50,10 +50,12 @@ class CharacterAdapter : RecyclerView.Adapter<CharacterAdapter.CharacterViewHold
             binding?.lastKnownLocation?.text = character.location?.name
             binding?.firstSeenIn?.text = character.origin?.name
             binding?.let {
-                Glide.with(it.root)
-                    .load(character.image)
-                    .apply(RequestOptions.centerCropTransform())
-                    .into(binding!!.characterImage)
+                binding?.characterImage?.let { characterImage ->
+                    Glide.with(it.root)
+                        .load(character.image)
+                        .apply(RequestOptions.centerCropTransform())
+                        .into(characterImage)
+                }
             }
             binding?.characterSpeciesAndStatus?.text =
                 "${character.status} - ${character.species}"

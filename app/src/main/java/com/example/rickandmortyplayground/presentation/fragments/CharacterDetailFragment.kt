@@ -79,4 +79,9 @@ class CharacterDetailFragment : Fragment(R.layout.character_detail_fragment) {
     private fun showProgressBar() {
         binding.progressBarDetail.visibility = View.VISIBLE
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }
