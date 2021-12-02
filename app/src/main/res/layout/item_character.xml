@@ -21,11 +21,11 @@
                 android:id="@+id/character_image"
                 android:layout_width="160dp"
                 android:layout_height="180dp"
+                android:contentDescription="@string/characters_image"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars"
-                android:contentDescription="@string/characters_image" />
+                tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
                 android:id="@+id/character_name"
@@ -49,11 +49,11 @@
                 android:layout_width="12dp"
                 android:layout_height="12dp"
                 android:layout_marginStart="15dp"
+                android:contentDescription="@string/color_indicator_all"
                 android:src="@drawable/ic_circle_red"
                 app:layout_constraintBottom_toTopOf="@id/last_known_location_text"
                 app:layout_constraintStart_toEndOf="@id/character_image"
-                app:layout_constraintTop_toBottomOf="@id/character_name"
-                android:contentDescription="@string/color_indicator_all" />
+                app:layout_constraintTop_toBottomOf="@id/character_name" />
 
 
             <TextView
@@ -61,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="4dp"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/color_indicator"
                 app:layout_constraintTop_toBottomOf="@+id/character_name"
@@ -72,7 +72,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="4dp"
                 android:text="@string/last_known_location"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
                 android:textSize="14sp"
@@ -81,13 +81,15 @@
 
             <TextView
                 android:id="@+id/last_known_location"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintStart_toEndOf="@+id/character_image"
                 app:layout_constraintTop_toBottomOf="@id/last_known_location_text"
                 tools:text="Earth" />
@@ -97,7 +99,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="4dp"
                 android:text="@string/first_seen_in"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
                 android:textSize="14sp"
@@ -106,13 +108,14 @@
 
             <TextView
                 android:id="@+id/first_seen_in"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/character_image"
                 app:layout_constraintTop_toBottomOf="@id/first_seen_in_text"
                 tools:text="Tolal Rickall" />
